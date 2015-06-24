@@ -3,7 +3,6 @@ package CousinCalculator;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.LinkedList;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -17,11 +16,16 @@ import javax.swing.SwingWorker;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultCaret;
 import javax.swing.text.Document;
 
 public class CousinCalcUI extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
 	//using HTML tags for cheap wrapping behavior
 	private static final String UI_HELP_TEXT= "<html>Enter source person to generate family tree. <br>Name Syntax: <br> &nbsp &nbsp Wikidata ID (Q1339109) <br> &nbsp &nbsp Wikipedia normalized name (Stephen_I,_Count_of_Burgundy) <br> &nbsp &nbsp Wikipedia article title (Stephen I, Count of Burgundy) <br> Multiple searches can be run against a single tree without regenerating the tree <br >Large depths (> 4) may take several minutes to complete";
 	private static final String TREE_RESULT_TEXT = "Generated %1$s people in %2$s seconds";
